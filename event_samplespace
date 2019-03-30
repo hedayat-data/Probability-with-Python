@@ -1,0 +1,15 @@
+#This program computes the basic discrete probability of tossing a coin.
+import random #Import module random number
+result=[] #List to store result of tossing a coin
+n=input('Number of times coin is tossed') #Enter the number of times the coin is tossed.
+n=int(n)
+result.clear()  #clear the list
+for i in range(0,n):  #storing the random occurance of 0 and 1 in result
+  result.append(random.randint(0,1))  #generates the random digits 0 and 1
+head=result.count(0)  #count number of head
+tail=result.count(1)  #count number of tails
+prob_head=head/(head+tail) #event/sample space
+prob_tail=tail/(head+tail)  #event/sample space
+print('number of head',head) #print event,occurance of head
+print('number of tail',tail)  #print event,occurance of tail
+print(prob_head,prob_tail)  #print probability of occurance of event 1 and event2
